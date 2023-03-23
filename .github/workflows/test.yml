@@ -25,5 +25,5 @@ jobs:
         with:
           milliseconds: 1000
       - name: log output
-        run: echo "${{steps.custom-wf.outputs.temp}}"
+        run: ${{steps.custom-wf.outputs.temp}}
 
