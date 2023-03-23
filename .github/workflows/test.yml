@@ -20,8 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
+        id: workflow
         with:
           milliseconds: 1000
-      - env:
-          wf-output: ${{test.outputs.temp}}
-      - run: echo "$wf-output"
+      - run: echo "steps.workflow.outputs.temp"
