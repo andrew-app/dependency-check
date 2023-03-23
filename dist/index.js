@@ -51,7 +51,7 @@ function run() {
             yield (0, wait_1.wait)(parseInt(ms, 10));
             core.debug(new Date().toTimeString());
             core.setOutput('time', new Date().toTimeString());
-            core.setOutput('test', "workflow is complete.");
+            core.setOutput('temp', "workflow was successful");
         }
         catch (error) {
             if (error instanceof Error)

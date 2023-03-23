@@ -19,8 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./
-        id: workflow
+      - name: Run custom action
+        id: custom-wf
+        uses: ./
         with:
           milliseconds: 1000
-      - run: echo "$GITHUB_OUTPUT"
+      - name: log output
+        run: echo "${{steps.test-wf.outputs.temp}}"
+
