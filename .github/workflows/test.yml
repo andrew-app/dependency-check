@@ -23,4 +23,4 @@ jobs:
         id: workflow
         with:
           milliseconds: 1000
-      - run: echo "steps.workflow.outputs.temp"
+      - run: echo "${{ steps.workflow.outputs.temp }}"
