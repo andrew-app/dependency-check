@@ -22,4 +22,6 @@ jobs:
       - uses: ./
         with:
           milliseconds: 1000
-      - run: ls -a
+      - env:
+          wf-output: ${{test.outputs.temp}}
+      - run: echo "$wf-output"
