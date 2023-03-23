@@ -5,7 +5,7 @@ inputs:
   milliseconds: # change this
     required: true
     description: 'input description here'
-    default: 'default value if applicable'
+    default: 100
 runs:
   using: 'node16'
   main: 'dist/index.js'
